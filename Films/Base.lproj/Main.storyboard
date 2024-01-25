@@ -95,43 +95,98 @@
                     <connections>
                         <outlet property="txtLogin" destination="eSC-Un-fit" id="IHd-e5-ZwC"/>
                         <outlet property="txtPassword" destination="j8E-bC-1Ej" id="wnq-jq-oJo"/>
-                        <segue destination="NEI-RD-U6e" kind="show" identifier="tela2" id="lOk-8s-Mh9"/>
+                        <segue destination="YsL-9Z-YaA" kind="show" identifier="tela2" id="YIG-rO-Cdq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-273" y="-27"/>
+            <point key="canvasLocation" x="-663" y="-27"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="MTz-2C-v6j">
+        <!--Filmes-->
+        <scene sceneID="5ux-5N-tHw">
             <objects>
-                <viewController id="NEI-RD-U6e" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pjy-HS-2o6">
+                <tableViewController id="ls5-d0-4JR" customClass="TableViewController" customModule="Films" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="w5e-cJ-mWl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="bbJ-3J-tpF"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                        <color key="tintColor" systemColor="tintColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="fRE-2x-wng"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R03-It-d9G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="gOf-9c-1u5" style="IBUITableViewCellStyleDefault" id="Xe8-bB-NFK">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xe8-bB-NFK" id="w4C-kv-7Bg">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gOf-9c-1u5">
+                                            <rect key="frame" x="20" y="0.0" width="353" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ls5-d0-4JR" id="x2c-Y6-fqd"/>
+                            <outlet property="delegate" destination="ls5-d0-4JR" id="pkq-M3-EE3"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Filmes" image="list.dash" catalog="system" id="NCX-qN-XqK"/>
+                    <navigationItem key="navigationItem" id="bpp-l9-2vY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x3G-ra-uvj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="-27"/>
+            <point key="canvasLocation" x="827" y="-408"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jdx-QC-Evu">
+            <objects>
+                <viewController id="60X-TG-New" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YnU-14-IVB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dsv-ko-6Yb"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="1jQ-9x-4iq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xaO-S2-3S0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837" y="318"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="KzQ-vf-hwk">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YsL-9Z-YaA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="5lW-Ph-ml8"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U9N-n5-QNk">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ls5-d0-4JR" kind="relationship" relationship="viewControllers" id="vij-DP-Dxj"/>
+                        <segue destination="60X-TG-New" kind="relationship" relationship="viewControllers" id="hjW-Le-IQx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rv0-34-myU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78.625954198473281" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
